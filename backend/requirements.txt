@@ -1,0 +1,7 @@
+# Render's default Python build command is `pip install -r requirements.txt`, which
+# doesn't know how to read pyproject.toml directly. This just delegates to it in
+# editable mode with the `server` extra (fastapi/uvicorn), matching what
+# `pip install -e ".[server]"` installs locally. The project's real dependency list
+# lives in pyproject.toml -- keep this file as the one-line passthrough, don't
+# duplicate deps here.
+-e .[server]

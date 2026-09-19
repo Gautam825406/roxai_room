@@ -72,9 +72,14 @@ def issue_token(body: TokenRequest) -> TokenResponse:
 
 
 def main() -> None:
+    import os
+
     import uvicorn
 
-    uvicorn.run("roxroom.token_server:app", host="0.0.0.0", port=8787, reload=False)
+    # Render (and most PaaS hosts) assign a dynamic port via $PORT and health-check
+    # whatever the service actually binds -- 8787 remains the local-dev default.
+    port = int(os.environ.get("PORT", "8787"))
+    uvicorn.run("roxroom.token_server:app", host="0.0.0.0", port=port, reload=False)
 
 
 if __name__ == "__main__":
