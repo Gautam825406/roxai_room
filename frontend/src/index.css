@@ -1,0 +1,82 @@
+:root {
+  /* Surfaces -- deep obsidian layering, darkest to lightest */
+  --c-bg: #0b0e15;
+  --c-surface: #10131a;
+  --c-surface-1: #191b23;
+  --c-surface-2: #1d1f27;
+  --c-surface-3: #272a32;
+  --c-surface-4: #32353d;
+
+  --c-text: #e1e2ec;
+  --c-text-dim: #8b93a7;
+  --c-border: #2c303c;
+  --c-border-bright: #3d494c;
+
+  /* Persona/role colors: Dost = cyan, Sathi = magenta, humans = green */
+  --c-dost: #4cd7f6;
+  --c-dost-strong: #06b6d4;
+  --c-dost-dim: rgba(76, 215, 246, 0.14);
+
+  --c-sathi: #ff9ecb;
+  --c-sathi-strong: #ec4899;
+  --c-sathi-dim: rgba(255, 158, 203, 0.14);
+
+  --c-human: #4edea3;
+  --c-human-strong: #10b981;
+  --c-human-dim: rgba(78, 222, 163, 0.14);
+
+  --c-warn: #f59e0b;
+  --c-danger: #ff6b6b;
+  --c-danger-strong: #ef4444;
+
+  --sans: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
+
+  font: 15px/145% var(--sans);
+  color-scheme: dark;
+  color: var(--c-text);
+  background: var(--c-bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Aliases kept for components that still reference the older token names */
+  --text: var(--c-text-dim);
+  --text-h: var(--c-text);
+  --bg: var(--c-bg);
+  --surface: var(--c-surface-2);
+  --border: var(--c-border);
+  --accent: var(--c-dost);
+  --accent-bg: var(--c-dost-dim);
+  --danger: var(--c-danger);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--sans);
+  font-weight: 700;
+  color: var(--c-text);
+  margin: 0;
+}
+
+.mono {
+  font-family: var(--mono);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}

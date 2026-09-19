@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+.env.local
+.pytest_cache/
+*.egg-info/
+.mypy_cache/
+backend/demo/audio_samples/*.wav
+node_modules/
+frontend/dist/
